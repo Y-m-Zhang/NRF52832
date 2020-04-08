@@ -1,0 +1,23 @@
+--cpu Cortex-M4.fp
+".\objects\main.o"
+".\objects\nrf_delay.o"
+".\objects\nrf_drv_uart.o"
+".\objects\nrf_drv_common.o"
+".\objects\nrf_drv_spi.o"
+".\objects\rtt_syscalls_keil.o"
+".\objects\segger_rtt.o"
+".\objects\segger_rtt_printf.o"
+".\objects\app_uart_fifo.o"
+".\objects\app_util_platform.o"
+".\objects\app_error.o"
+".\objects\nrf_assert.o"
+".\objects\app_fifo.o"
+".\objects\app_error_weak.o"
+".\objects\retarget.o"
+".\objects\ads1292r.o"
+".\objects\arm_startup_nrf52.o"
+".\objects\system_nrf52.o"
+--strict --scatter ".\Objects\lis3dh.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\lis3dh.map" -o .\Objects\lis3dh.axf
