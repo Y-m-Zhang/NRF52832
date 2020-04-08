@@ -1,0 +1,26 @@
+--cpu Cortex-M4.fp
+".\objects\main.o"
+".\objects\nrf_delay.o"
+".\objects\nrf_drv_uart.o"
+".\objects\nrf_drv_common.o"
+".\objects\twi_hw_master.o"
+".\objects\rtt_syscalls_keil.o"
+".\objects\segger_rtt.o"
+".\objects\segger_rtt_printf.o"
+".\objects\nrf_drv_timer.o"
+".\objects\nrf_drv_saadc.o"
+".\objects\nrf_saadc.o"
+".\objects\app_uart_fifo.o"
+".\objects\app_util_platform.o"
+".\objects\app_error.o"
+".\objects\nrf_assert.o"
+".\objects\app_fifo.o"
+".\objects\app_error_weak.o"
+".\objects\retarget.o"
+".\objects\max30102.o"
+".\objects\arm_startup_nrf52.o"
+".\objects\system_nrf52.o"
+--strict --scatter ".\Objects\max30102.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\max30102.map" -o .\Objects\max30102.axf

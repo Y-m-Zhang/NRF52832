@@ -1,0 +1,20 @@
+--cpu Cortex-M4.fp
+".\objects\main.o"
+".\objects\nrf_delay.o"
+".\objects\nrf_drv_uart.o"
+".\objects\nrf_drv_common.o"
+".\objects\twi_hw_master.o"
+".\objects\app_uart_fifo.o"
+".\objects\app_util_platform.o"
+".\objects\app_error.o"
+".\objects\nrf_assert.o"
+".\objects\app_fifo.o"
+".\objects\app_error_weak.o"
+".\objects\retarget.o"
+".\objects\mpu6050.o"
+".\objects\arm_startup_nrf52.o"
+".\objects\system_nrf52.o"
+--strict --scatter ".\Objects\mpu6050.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\mpu6050.map" -o .\Objects\mpu6050.axf
