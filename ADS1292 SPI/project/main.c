@@ -12,7 +12,7 @@
 ** Created by:			
 ** Created date:		2015-7-1
 ** Version:			    1.0
-** Descriptions:		LIS3DH读写实验
+** Descriptions:		ADS1292R SPI
 **--------------------------------------------------------------------------------------------------------*/
 #include <stdbool.h>
 #include <stdint.h>
@@ -26,17 +26,7 @@
 #include "nrf_drv_spi.h"
 #include "SEGGER_RTT.h"
 
-
-//本实验开发板和LIS3DH之间使用的是SPI总线通讯
-/* 开发板中LIS3DH模块和串口占用的nRF52832管脚资源
-P0.06：UART_TXD   ：串口发送
-P0.08：UART_RXD   ：串口接收
-P0.07：UART_CTS   : 未使用流控
-P0.05：UART_RTS   : 未使用流控
-
-
-*/
-
+额
 #define UART_TX_BUF_SIZE 256                         /**< UART TX buffer size. */
 #define UART_RX_BUF_SIZE 1                           /**< UART RX buffer size. */
 
@@ -144,14 +134,7 @@ int main(void)
 {
 		char *data_ptr;
 		uint8_t data_buf[9];
-//	  nrf_gpio_cfg_output(LED_1); //配置P0.17为输出，驱动指示灯D1
-//	  nrf_gpio_cfg_output(LED_2);
-//	  nrf_gpio_pin_set(LED_1);
-//	  nrf_gpio_pin_set(LED_2);
-//	  nrf_gpio_range_cfg_input(BUTTON_START,BUTTON_STOP,NRF_GPIO_PIN_PULLUP);//配置P0.17~P0.20为输入
-//    uart_init();
-//		SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_NO_BLOCK_SKIP);
-//	  nrf_delay_ms(100);
+
 		SPI_Init();
 		
 		nrf_gpio_cfg_input(ADS1292R_ADC_RDY_PIN,GPIO_PIN_CNF_PULL_Pullup); 
