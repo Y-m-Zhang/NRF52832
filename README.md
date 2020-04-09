@@ -16,6 +16,7 @@ NRF SPI读写ADS1292R单导心电数据
 ## MAX30102
 NRF TWI读写MAX30102脉搏数据、Timer控制采样率100~1000Hz
 <img src="https://raw.github.com/Y-m-Zhang/NRF52832/master/pic/MAX30102.gif" width="450" height="300" />
+<div align=center><img src="https://github.com/Y-m-Zhang/NRF52832/master/pic/MAX30102.gif" width="450" height="300" /></div>
 |模块引脚|GPIO|
 |---|---|
 |CLK|22|
@@ -23,9 +24,10 @@ NRF TWI读写MAX30102脉搏数据、Timer控制采样率100~1000Hz
 |INT|26|
 
 ## AD8232+MAX30102
+AD8232
+<img src="https://raw.github.com/Y-m-Zhang/NRF52832/master/pic/AD8232.jpg" width="450" height="300" />
+OUTPUT引脚连接NRF的模拟输入
+
 NRF同步读取 （1）SAADC采样AD8232单导心电数据（Fs=250Hz）（2）TWI读写MAX30102脉搏数据（Fs=100Hz）
 双Timer分别控制速率
 
-<img src="https://raw.github.com/Y-m-Zhang/NRF52832/master/pic/AD8232.jpg" width="450" height="300" />
-
-OUTPUT引脚连接NRF的模拟输入
